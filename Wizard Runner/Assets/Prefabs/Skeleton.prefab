@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 8418920896234483971}
   - component: {fileID: 8418920896248176745}
   m_Layer: 0
-  m_Name: Object01
+  m_Name: Skeleton Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 8418920896248176747}
   - component: {fileID: 8418920895900480339}
   m_Layer: 0
-  m_Name: Object02
+  m_Name: Skeleton Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
