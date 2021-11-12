@@ -442,3 +442,4 @@ MonoBehaviour:
   range: 100
   damage: 25
   staffVFX: {fileID: 5261671383788734680}
+  hitVFX: {fileID: 3068338385876114188, guid: 036c365d03248d843898059a6ef4a4e7, type: 3}
