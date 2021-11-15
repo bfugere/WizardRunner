@@ -11,10 +11,12 @@ public class EnemyAI : MonoBehaviour
     float distanceToTarget = Mathf.Infinity;
     bool isProvoked = false;
 
+    Animator animator;
     NavMeshAgent navMeshAgent;
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
 
@@ -39,11 +41,14 @@ public class EnemyAI : MonoBehaviour
 
     void ChaseTarget()
     {
+        animator.SetBool("isAttacking", false);
+        animator.SetBool("isWalking", true);
         navMeshAgent.SetDestination(target.position);
     }
 
     void AttackTarget()
     {
+        animator.SetBool("isAttacking", true);
         Debug.Log(name + " is attacking " + target.name);
     }
 
