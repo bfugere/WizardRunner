@@ -10,7 +10,7 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float turnSpeed = 5f;
 
     float distanceToTarget = Mathf.Infinity;
-    bool isProvoked = false;
+    public bool isProvoked = false;
 
     Animator animator;
     NavMeshAgent navMeshAgent;
