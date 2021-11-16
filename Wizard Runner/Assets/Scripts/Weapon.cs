@@ -10,19 +10,22 @@ public class Weapon : MonoBehaviour
     [SerializeField] float damage = 25f;
     [SerializeField] ParticleSystem staffVFX;
     [SerializeField] GameObject hitVFX;
+    [SerializeField] Mana manaSlot;
     
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
-        {
             Shoot();
-        }
     }
 
     void Shoot()
     {
-        PlayStaffVFX();
-        ProcessRaycast();
+        if (manaSlot.GetCurrentAmmo() > 0)
+        {
+            PlayStaffVFX();
+            ProcessRaycast();
+            manaSlot.ReduceCurrentAmmo();
+        }
     }
 
     void PlayStaffVFX()
