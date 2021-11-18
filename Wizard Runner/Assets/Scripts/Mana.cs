@@ -4,15 +4,35 @@ using UnityEngine;
 
 public class Mana : MonoBehaviour
 {
-    [SerializeField] int currentMana = 10;
-
-    public int GetCurrentAmmo()
+    [SerializeField] ManaPouch[] manaPouches;
+    
+    [System.Serializable]
+    private class ManaPouch
     {
-        return currentMana;
+        public ManaType manaType;
+        public int currentMana;
     }
 
-    public void ReduceCurrentAmmo()
+    public int GetCurrentMana(ManaType manaType)
     {
-        currentMana--;
+        return GetManaType(manaType).currentMana;
+    }
+
+    public void ReduceCurrentMana(ManaType manaType)
+    {
+        GetManaType(manaType).currentMana--;
+    }
+
+    private ManaPouch GetManaType(ManaType manaType)
+    {
+        foreach (ManaPouch type in manaPouches)
+        {
+            if (type.manaType == manaType)
+            {
+                return type;
+            }
+        }
+
+        return null;
     }
 }

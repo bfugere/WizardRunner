@@ -342,7 +342,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67882773c74024f40a92e6e9b2ff03ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentMana: 50
+  manaPouches:
+  - manaType: 0
+    currentMana: 10
+  - manaType: 1
+    currentMana: 10
+  - manaType: 2
+    currentMana: 10
 --- !u!1 &7985785490052748262
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +451,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ice Staff
       objectReference: {fileID: 0}
+    - target: {fileID: 351905991051549881, guid: 87b974e94348561479b86d1c33d24e13, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6875371282074791988, guid: 87b974e94348561479b86d1c33d24e13, type: 3}
       propertyPath: FPCamera
       value: 
@@ -525,7 +535,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 351905991051549881, guid: 22c1fe63932cf7943a14c79fa5d8bfb6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3813371458993611097, guid: 22c1fe63932cf7943a14c79fa5d8bfb6, type: 3}
       propertyPath: FPCamera

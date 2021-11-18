@@ -2524,6 +2524,10 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 1555327111}
+    - target: {fileID: 1587206166110139542, guid: 9a6114beb1eee75498ca4cf5a58f4b98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1587804680343900630, guid: 9a6114beb1eee75498ca4cf5a58f4b98, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2571,6 +2575,14 @@ PrefabInstance:
     - target: {fileID: 1587804680344194546, guid: 9a6114beb1eee75498ca4cf5a58f4b98, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628650821832508335, guid: 9a6114beb1eee75498ca4cf5a58f4b98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7930593370710708837, guid: 9a6114beb1eee75498ca4cf5a58f4b98, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a6114beb1eee75498ca4cf5a58f4b98, type: 3}
