@@ -22,12 +22,17 @@ public class EnemyHealth : MonoBehaviour
 
         if (hitPoints <= 0)
         {
-            navMeshAgent.speed = 0f;
             animator.SetBool("isIdling", false);
             animator.SetBool("isWalking", false);
             animator.SetBool("isAttacking", false);
+
+            navMeshAgent.speed = 0f;
             animator.SetBool("isDead", true);
             Destroy(gameObject, 2.5f);
+
+            // TODO: Refactor Code & Extract Method.
+            // TODO: Add Random Drop Chances.
+            // TODO: Add Death VFX.
         }
     }
 }
