@@ -185,7 +185,7 @@ GameObject:
   - component: {fileID: 3673430144689743455}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67882773c74024f40a92e6e9b2ff03ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaPouches:
+  manaPouch:
   - manaType: 0
     currentMana: 10
   - manaType: 1

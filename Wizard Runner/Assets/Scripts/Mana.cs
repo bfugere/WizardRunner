@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mana : MonoBehaviour
 {
-    [SerializeField] ManaPouch[] manaPouches;
+    [SerializeField] ManaPouch[] manaPouch;
     
     [System.Serializable]
     private class ManaPouch
@@ -25,14 +25,11 @@ public class Mana : MonoBehaviour
 
     private ManaPouch GetManaType(ManaType manaType)
     {
-        foreach (ManaPouch type in manaPouches)
+        foreach (ManaPouch type in manaPouch)
         {
             if (type.manaType == manaType)
-            {
                 return type;
-            }
         }
-
         return null;
     }
 }
