@@ -23,6 +23,11 @@ public class Mana : MonoBehaviour
         GetManaType(manaType).currentMana--;
     }
 
+    public void IncreaseCurrentMana(ManaType manaType, int manaAmount)
+    {
+        GetManaType(manaType).currentMana += manaAmount;
+    }
+
     private ManaPouch GetManaType(ManaType manaType)
     {
         foreach (ManaPouch type in manaPouch)
