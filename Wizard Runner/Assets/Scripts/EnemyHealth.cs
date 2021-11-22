@@ -7,6 +7,12 @@ public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] float hitPoints = 100f;
 
+    bool isDead = false;
+    public bool IsDead()
+    {
+        return isDead;
+    }
+
     Animator animator;
     NavMeshAgent navMeshAgent;
 
@@ -15,24 +21,24 @@ public class EnemyHealth : MonoBehaviour
         animator = GetComponent<Animator>();
         navMeshAgent = GetComponent<NavMeshAgent>();
     }
+
     public void TakeDamage(float damage)
     {
         BroadcastMessage("EnemyProvoked");
         hitPoints -= damage;
 
         if (hitPoints <= 0)
-        {
-            animator.SetBool("isIdling", false);
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isAttacking", false);
+            Die();
+    }
 
-            navMeshAgent.speed = 0f;
-            animator.SetBool("isDead", true);
-            Destroy(gameObject, 2.5f);
+    void Die()
+    {
+        isDead = true;
+        navMeshAgent.speed = 0f;
+        animator.SetTrigger("isDead");
+        Destroy(gameObject, 2.5f);
 
-            // TODO: Refactor Code & Extract Method.
-            // TODO: Add Random Drop Chances.
-            // TODO: Add Death VFX.
-        }
+        // TODO: Add Random Drop Chances.
+        // TODO: Add Death VFX.
     }
 }
