@@ -650,6 +650,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1587804680343900628}
     m_Modifications:
+    - target: {fileID: 798007533634839944, guid: d75582f13810e4d4585e7d34847be6f5, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1057921760995135048, guid: d75582f13810e4d4585e7d34847be6f5, type: 3}
       propertyPath: m_Name
       value: Flashlight
