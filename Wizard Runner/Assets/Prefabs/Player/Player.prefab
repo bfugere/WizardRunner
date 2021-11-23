@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 4100685865021805815}
   - component: {fileID: 466434480871685524}
   - component: {fileID: 3673430144689743455}
+  - component: {fileID: 6709054809223921281}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -350,6 +351,20 @@ MonoBehaviour:
     currentMana: 10
   - manaType: 2
     currentMana: 10
+--- !u!114 &6709054809223921281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587804680344194546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef64ec3b5c1cd0440bdb955086992503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageTakenCanvas: {fileID: 0}
+  damageTakenTime: 1
 --- !u!1 &7985785490052748262
 GameObject:
   m_ObjectHideFlags: 0

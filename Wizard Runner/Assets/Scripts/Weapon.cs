@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -12,11 +13,19 @@ public class Weapon : MonoBehaviour
     [SerializeField] GameObject hitVFX;
     [SerializeField] Mana manaSlot;
     [SerializeField] ManaType manaType;
+    [SerializeField] TextMeshProUGUI manaText;
 
     void Update()
     {
+        DisplayMana();
         if (Input.GetButtonDown("Fire1"))
             Shoot();
+    }
+
+    void DisplayMana()
+    {
+        int currentMana = manaSlot.GetCurrentMana(manaType);
+        manaText.text = currentMana.ToString();
     }
 
     void Shoot()

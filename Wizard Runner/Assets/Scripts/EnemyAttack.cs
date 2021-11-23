@@ -18,6 +18,6 @@ public class EnemyAttack : MonoBehaviour
             return;
 
         target.TakeDamage(damage);
-        Debug.Log("Hit");
+        target.GetComponent<DisplayDamage>().ShowDamageTakenCanvas();
     }
 }
